@@ -1,6 +1,3 @@
-// Раскомментируйте строку ниже, если стили подключаются через app.js, а не index.js:
-// import '../css/style.css';
-
 const API_URL = 'http://localhost:7071';
 const WS_URL = 'ws://localhost:7071';
 
