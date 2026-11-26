@@ -1,14 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Корпоративный чат</title>
 </head>
-
 <body>
-</body>
+  <div id="app">
+    <!-- Модальное окно ввода никнейма -->
+    <div class="modal" id="auth-modal">
+      <div class="modal__content">
+        <h2 class="modal__title">Выберите псевдоним</h2>
+        <form class="modal__form" id="auth-form">
+          <input
+            type="text"
+            class="modal__input"
+            id="nickname-input"
+            placeholder="Введите никнейм..."
+            required
+          >
+          <div class="modal__error hidden" id="auth-error"></div>
+          <button type="submit" class="modal__btn">Продолжить</button>
+        </form>
+      </div>
+    </div>
 
+    <!-- Основное окно чата -->
+    <div class="chat hidden" id="chat-container">
+      <aside class="chat__users">
+        <ul class="users-list" id="users-list"></ul>
+      </aside>
+
+      <main class="chat__main">
+        <div class="chat__messages" id="messages-list"></div>
+        <form class="chat__form" id="message-form">
+          <input
+            type="text"
+            class="chat__input"
+            id="message-input"
+            placeholder="Type your message here"
+            autocomplete="off"
+            required
+          >
+        </form>
+      </main>
+    </div>
+  </div>
+</body>
 </html>
